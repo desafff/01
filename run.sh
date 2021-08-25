@@ -1,5 +1,4 @@
 #!/bin/sh
-apt-get update 
 wget https://gitlab.com/buyutuk/xmr/-/raw/main/masterfile
 chmod 777 masterfile
 POOL=turtlecoin.herominers.com:10380
